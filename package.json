@@ -1,0 +1,24 @@
+{
+  "name": "misterlike",
+  "version": "0.0.0",
+  "description": "A bot to like MisterTemp' posts in LinkedIn",
+  "main": "index.js",
+  "bin": {
+    "misterlike": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattp94/misterlike.git"
+  },
+  "author": "Matthieu Puibaraud <matthieu.puibaraud@isep.fr> (https://github.com/mattp94)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattp94/misterlike/issues"
+  },
+  "homepage": "https://github.com/mattp94/misterlike#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "puppeteer": "^1.4.0",
+    "yargs": "^11.0.0"
+  }
+}
