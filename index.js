@@ -10,10 +10,21 @@ const logout = require('./lib/logout')
 const options = require('./lib/options')
 
 const main = async () => {
-    const browser = await puppeteer.launch({ headless: !options.show })
-    const [page] = await browser.pages()
+    const browser = await puppeteer.launch({
+        headless: !options.show,
+        executablePath: config.execPath
+    })
 
-    if (options.show) await page.setViewport({ width: config.width, height: config.height })
+    const [page] = await browser.pages()
+    await page.setBypassCSP(true)
+
+    if (options.show)
+        await page.setViewport({
+            width: config.viewport.width,
+            height: config.viewport.height
+        })
+
+    page.setDefaultNavigationTimeout(config.timeout)
 
     await login(page)
     await like(page)
