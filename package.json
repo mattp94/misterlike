@@ -6,6 +6,9 @@
   "bin": {
     "misterlike": "./index.js"
   },
+  "scripts": {
+    "preuninstall": "node clear.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mattp94/misterlike.git"
@@ -18,6 +21,7 @@
   "homepage": "https://github.com/mattp94/misterlike#readme",
   "dependencies": {
     "chalk": "^2.4.1",
+    "conf": "^2.0.0",
     "puppeteer": "^1.4.0",
     "yargs": "^11.0.0"
   }
