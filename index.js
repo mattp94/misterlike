@@ -18,16 +18,21 @@ const main = async () => {
     const [page] = await browser.pages()
     await page.setBypassCSP(true)
 
-    if (show)
+    if (show) {
         await page.setViewport({
             width: config.get('viewport.width'),
             height: config.get('viewport.height')
         })
+    }
 
     page.setDefaultNavigationTimeout(config.get('timeout'))
 
     await login(page, email, password)
-    await like(page)
+
+    for (const company of config.get('companies')) {
+        await like(page, company)
+    }
+
     await logout(page)
     await browser.close()
 
