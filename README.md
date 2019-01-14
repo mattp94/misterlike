@@ -1,6 +1,6 @@
 # MisterLike
 
-> Let's like all MisterTemp' posts!
+> Let's like all MisterTemp' posts! 👍
 
 ## Getting started
 
