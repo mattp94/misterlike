@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/mattp94/misterlike#readme",
   "dependencies": {
-    "chalk": "^2.4.1",
-    "conf": "^2.0.0",
-    "puppeteer": "^1.7.0",
-    "yargs": "^12.0.1"
+    "chalk": "^2.4.2",
+    "conf": "^2.1.0",
+    "puppeteer": "^1.11.0",
+    "yargs": "^12.0.5"
   }
 }
