@@ -1,6 +1,6 @@
 {
   "name": "misterlike",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A bot to like MisterTemp' posts in LinkedIn",
   "main": "index.js",
   "bin": {
