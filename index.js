@@ -7,7 +7,8 @@ const like = require('./lib/like')
 const logger = require('./lib/logger')
 const login = require('./lib/login')
 const logout = require('./lib/logout')
-const { email, password, show } = require('./lib/options')
+const { email, notification, password, show } = require('./lib/options')
+const { notify } = require('./lib/util')
 
 const main = async () => {
     const browser = await puppeteer.launch({
@@ -37,9 +38,18 @@ const main = async () => {
     await browser.close()
 
     logger.info('Done')
+
+    if (notification) {
+        await notify('Bot has successfully passed 😀')
+    }
 }
 
-main().catch(err => {
+main().catch(async err => {
     logger.error(err.message)
+
+    if (notification) {
+        await notify('An error occurred 😞')
+    }
+
     process.exit(1)
 })
