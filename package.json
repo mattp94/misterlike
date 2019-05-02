@@ -21,9 +21,9 @@
   "homepage": "https://github.com/mattp94/misterlike#readme",
   "dependencies": {
     "chalk": "^2.4.2",
-    "conf": "^2.2.0",
-    "node-notifier": "^5.3.0",
-    "puppeteer": "^1.11.0",
-    "yargs": "^12.0.5"
+    "conf": "^4.0.2",
+    "node-notifier": "^5.4.0",
+    "puppeteer": "^1.15.0",
+    "yargs": "^13.2.2"
   }
 }
